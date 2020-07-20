@@ -874,6 +874,11 @@
     lodash "^4.17.19"
     to-fast-properties "^2.0.0"
 
+"@brainhubeu/react-carousel@^1.19.22":
+  version "1.19.22"
+  resolved "https://registry.yarnpkg.com/@brainhubeu/react-carousel/-/react-carousel-1.19.22.tgz#cb846b1d1e04463723b662b616206d5875c02053"
+  integrity sha512-a5QY1Fh/nwL7EPDMylUr23yZmcEQfLBCHrgGI+K5UbSd5c5x+xAzBgw6pMXaQ2FAUU7dONDuWxWH9QzWzs1KHQ==
+
 "@emotion/is-prop-valid@^0.8.8":
   version "0.8.8"
   resolved "https://registry.yarnpkg.com/@emotion/is-prop-valid/-/is-prop-valid-0.8.8.tgz#db28b1c4368a259b60a97311d6a952d4fd01ac1a"
