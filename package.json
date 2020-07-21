@@ -10,12 +10,14 @@
   "dependencies": {
     "@brainhubeu/react-carousel": "^1.19.22",
     "dropbox": "^5.2.0",
+    "lodash": "^4.17.19",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "styled-components": "^5.1.1"
   },
   "devDependencies": {
     "@babel/core": "^7.10.5",
+    "@babel/plugin-transform-runtime": "^7.10.5",
     "@babel/preset-env": "^7.10.4",
     "@babel/preset-react": "^7.10.4",
     "babel-loader": "^8.1.0",
