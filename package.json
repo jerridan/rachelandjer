@@ -12,6 +12,7 @@
     "cloudinary-react": "^1.6.2",
     "dropbox": "^5.2.0",
     "lodash": "^4.17.19",
+    "polished": "^3.6.5",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "styled-components": "^5.1.1"
