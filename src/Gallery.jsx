@@ -1,12 +1,22 @@
-import React, { useState } from "react";
+import React from "react";
 import { Image, Transformation } from "cloudinary-react";
 import styled from "styled-components";
+import Carousel from "@brainhubeu/react-carousel";
+import "@brainhubeu/react-carousel/lib/style.css";
+
+const images = ["dorcas_jirah_wedding.jpg", "valentines_day.jpg"];
+const carouselHeight = 450;
+
+const CarouselImage = ({ imageIndex }) => {
+  return (
+    <Image publicId={images[imageIndex]}>
+      <Transformation height={carouselHeight} crop="scale" />
+    </Image>
+  );
+};
 
 export default function Gallery() {
-  const images = ["dorcas_jirah_wedding.jpg", "valentines_day.jpg"];
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const carouselHeight = 450;
-  const Carousel = styled.div`
+  const CarouselContainer = styled.div`
     background-color: pink;
     grid-column-start: 1;
     grid-column-end: 3;
@@ -14,34 +24,13 @@ export default function Gallery() {
     grid-row-end: 3;
   `;
 
-  const handlePrev = () => {
-    if (currentImageIndex === 0) {
-      setCurrentImageIndex(images.length - 1);
-    } else {
-      setCurrentImageIndex(currentImageIndex - 1);
-    }
-  };
-
-  const handleNext = () => {
-    if (currentImageIndex === images.length - 1) {
-      setCurrentImageIndex(0);
-    } else {
-      setCurrentImageIndex(currentImageIndex + 1);
-    }
-  };
-
   return (
-    <>
-      <button onClick={handlePrev}>Prev</button>
-      <button onClick={handleNext}>Next</button>
-      <Carousel>
-        <Image
-          publicId={images[currentImageIndex]}
-          style={{ margin: "0 auto", display: "block" }}
-        >
-          <Transformation height={carouselHeight} crop="scale" />
-        </Image>
+    <CarouselContainer>
+      <Carousel arrows infinite>
+        {images.map((_image, index) => (
+          <CarouselImage imageIndex={index} key={index} />
+        ))}
       </Carousel>
-    </>
+    </CarouselContainer>
   );
 }
