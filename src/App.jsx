@@ -7,13 +7,5 @@ const dbx = new Dropbox({
 });
 
 export default function App() {
-  dbx
-    .filesListFolder({ path: "" })
-    .then(function (response) {
-      console.log(response);
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
   return <Gallery />;
 }
