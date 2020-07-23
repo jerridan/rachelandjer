@@ -7,7 +7,8 @@ import { CloudinaryContext } from "cloudinary-react";
 const Normalize = createGlobalStyle`${normalize()}`;
 
 const Grid = styled.div`
-  grid-template-rows: auto 75% auto;
+  grid-template-rows: auto 450px auto;
+  grid-template-columns: 50% 50%;
   position: absolute;
   display: grid;
   height: 100%;
@@ -22,9 +23,7 @@ export default function App() {
         cloudName={process.env.CLOUDINARY_CLOUD_NAME}
         crop="fill"
         gravity="faces"
-        width="400"
-        height="300"
-        quality="100"
+        quality="50"
       >
         <Grid>
           <Gallery />
