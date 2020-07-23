@@ -1,22 +1,20 @@
 import React from "react";
-import { Image, Transformation } from "cloudinary-react";
+import { CloudinaryContext, Image } from "cloudinary-react";
 
 export default function Gallery() {
   return (
     <div>
-      <Image
+      <CloudinaryContext
         cloudName={process.env.CLOUDINARY_CLOUD_NAME}
-        publicId="dorcas_jirah_wedding.jpg"
+        crop="fill"
+        gravity="faces"
+        width="400"
+        height="300"
+        quality="100"
       >
-        <Transformation
-          crop="fill"
-          gravity="faces"
-          width="400"
-          height="300"
-          quality="auto"
-          fetchFormat="auto"
-        />
-      </Image>
+        <Image publicId="dorcas_jirah_wedding.jpg" />
+        <Image publicId="valentines_day.jpg" />
+      </CloudinaryContext>
     </div>
   );
 }
