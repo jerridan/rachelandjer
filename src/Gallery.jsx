@@ -15,8 +15,7 @@ const CarouselImage = ({ imageIndex }) => {
   );
 };
 
-export default function Gallery() {
-  const CarouselContainer = styled.div`
+const CarouselContainer = styled.div`
     background-color: pink;
     grid-column-start: 1;
     grid-column-end: 3;
@@ -24,11 +23,14 @@ export default function Gallery() {
     grid-row-end: 3;
   `;
 
+export default function Gallery() {
   return (
     <CarouselContainer>
       <Carousel arrows infinite>
         {images.map((_image, index) => (
-          <CarouselImage imageIndex={index} key={index} />
+          <div key={index}>
+            <CarouselImage imageIndex={index} key={index} />
+          </div>
         ))}
       </Carousel>
     </CarouselContainer>
