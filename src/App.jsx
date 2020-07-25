@@ -13,6 +13,7 @@ const Grid = styled.div`
   display: grid;
   height: 100%;
   width: 100%;
+  font-family: "Vesper Libre", sans-serif;
 `;
 
 export default function App() {
