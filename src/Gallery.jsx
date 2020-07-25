@@ -22,9 +22,9 @@ export default function Gallery() {
   return (
     <CarouselContainer>
       <Carousel arrows infinite>
-        {images.map((_image, index) => (
+        {images.map((image, index) => (
           <CarouselImageContainer key={index}>
-            <CarouselImage imageIndex={index} key={index} />
+            <CarouselImage image={image} />
           </CarouselImageContainer>
         ))}
       </Carousel>

@@ -1,26 +1,30 @@
 import React from "react";
 import styled from "styled-components";
 import { Image, Transformation } from "cloudinary-react";
-import images from "./images";
 
 const carouselHeight = 450;
 const descriptionHeight = 50;
 
 const ImageDescription = styled.div`
   height: ${descriptionHeight}px;
+  text-align: center;
+  line-height: 25px;
 `;
 
-export default function CarouselImage({ imageIndex }) {
+export default function CarouselImage({ image }) {
   return (
     <>
-      <Image publicId={images[imageIndex]}>
+      <Image publicId={image.name}>
         <Transformation
           height={carouselHeight - descriptionHeight}
-          crop="scale"
+          width={image.width}
+          crop="fill"
+          gravity="faces"
+          quality="50"
         />
       </Image>
-      <ImageDescription>
-        <span>That time we went to a (second?) wedding</span>
+      <ImageDescription style={{ width: `${image.width}px` }}>
+        <span>{image.description}</span>
       </ImageDescription>
     </>
   );

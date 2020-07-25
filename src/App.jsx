@@ -19,12 +19,7 @@ export default function App() {
   return (
     <Fragment>
       <Normalize />
-      <CloudinaryContext
-        cloudName={process.env.CLOUDINARY_CLOUD_NAME}
-        crop="fill"
-        gravity="faces"
-        quality="50"
-      >
+      <CloudinaryContext cloudName={process.env.CLOUDINARY_CLOUD_NAME}>
         <Grid>
           <Gallery />
         </Grid>
