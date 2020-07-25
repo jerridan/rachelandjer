@@ -1,9 +1,9 @@
 import React, { Fragment } from "react";
 import { normalize } from "polished";
-import Gallery from "./Gallery";
 import styled, { createGlobalStyle } from "styled-components";
 import { CloudinaryContext } from "cloudinary-react";
 import backgroundImage from "./cherry_blossoms_2000w.png";
+import ParallaxGallery from "./ParallaxGallery";
 
 const Normalize = createGlobalStyle`${normalize()}`;
 
@@ -17,6 +17,7 @@ const Grid = styled.div`
   font-family: "Vesper Libre", sans-serif;
   background-image: url(${backgroundImage});
   background-size: cover;
+  background-position-y: 30%;
   background-repeat: no-repeat;
 `;
 
@@ -26,7 +27,7 @@ export default function App() {
       <Normalize />
       <CloudinaryContext cloudName={process.env.CLOUDINARY_CLOUD_NAME}>
         <Grid>
-          <Gallery />
+          <ParallaxGallery />
         </Grid>
       </CloudinaryContext>
     </Fragment>
