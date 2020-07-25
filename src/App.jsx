@@ -3,6 +3,7 @@ import { normalize } from "polished";
 import Gallery from "./Gallery";
 import styled, { createGlobalStyle } from "styled-components";
 import { CloudinaryContext } from "cloudinary-react";
+import backgroundImage from "./cherry_blossoms_2000w.png";
 
 const Normalize = createGlobalStyle`${normalize()}`;
 
@@ -14,6 +15,9 @@ const Grid = styled.div`
   height: 100%;
   width: 100%;
   font-family: "Vesper Libre", sans-serif;
+  background-image: url(${backgroundImage});
+  background-size: cover;
+  background-repeat: no-repeat;
 `;
 
 export default function App() {

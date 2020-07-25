@@ -6,7 +6,6 @@ import CarouselImage from "./CarouselImage";
 import images from "./images";
 
 const CarouselContainer = styled.div`
-  background-color: pink;
   grid-column-start: 1;
   grid-column-end: 3;
   grid-row-start: 2;
