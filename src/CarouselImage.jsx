@@ -5,10 +5,15 @@ import { Image, Transformation } from "cloudinary-react";
 const carouselHeight = 450;
 const descriptionHeight = 50;
 
-const ImageDescription = styled.div`
+const DescriptionContainer = styled.div`
+  display: table;
   height: ${descriptionHeight}px;
+`;
+
+const Description = styled.span`
+  display: table-cell;
+  vertical-align: middle;
   text-align: center;
-  line-height: 25px;
 `;
 
 export default function CarouselImage({ image }) {
@@ -23,9 +28,9 @@ export default function CarouselImage({ image }) {
           quality="50"
         />
       </Image>
-      <ImageDescription style={{ width: `${image.width}px` }}>
-        <span>{image.description}</span>
-      </ImageDescription>
+      <DescriptionContainer style={{ width: `${image.width}px` }}>
+        <Description>{image.description}</Description>
+      </DescriptionContainer>
     </>
   );
 }

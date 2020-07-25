@@ -1,7 +1,7 @@
 export default [
   {
     name: "dorcas_jirah_wedding.jpg",
-    description: "That time we went to a (second?) wedding",
+    description: "That time we went to a (second?) wedding and had some fun with the photographer.",
     width: 600,
   },
   {
