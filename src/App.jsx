@@ -59,7 +59,7 @@ export default function App() {
             config={{ tension: 200, friction: 40, precision: 0.01, mass: 2 }}
           >
             <ParallaxLayer offset={0.5} speed={0.5}>
-              <Title>Jerridan & Rachel</Title>
+              <Title>Rachel & Jerridan</Title>
             </ParallaxLayer>
             <ParallaxGallery />
           </Parallax>
