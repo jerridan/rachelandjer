@@ -14,7 +14,7 @@ const Normalize = createGlobalStyle`${normalize()}`;
 
 const Background = styled.div`
   position: absolute;
-  height: 100%;
+  height: 100vh;
   width: 100%;
   font-family: "Vesper Libre", serif;
   background-position-y: 35%;
