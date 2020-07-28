@@ -8,7 +8,7 @@ import backgroundImageMedium from "./cherry_blossoms_1360w.png";
 import backgroundImageLarge from "./cherry_blossoms_2000w.png";
 import ParallaxGallery from "./ParallaxGallery";
 import { Parallax, ParallaxLayer } from "react-spring/renderprops-addons";
-import { extraSmall, small, medium, large } from "./breakpoints";
+import { extraSmallQuery, smallQuery, mediumQuery, largeQuery } from "./breakpoints";
 
 const Normalize = createGlobalStyle`${normalize()}`;
 
@@ -20,16 +20,16 @@ const Background = styled.div`
   background-position-y: 35%;
   background-size: cover;
   background-repeat: no-repeat;
-  @media (${extraSmall}) {
+  @media (${extraSmallQuery}) {
     background-image: url(${backgroundImageExtraSmall});
   }
-  @media (${small}) {
+  @media (${smallQuery}) {
     background-image: url(${backgroundImageSmall});
   }
-  @media (${medium}) {
+  @media (${mediumQuery}) {
     background-image: url(${backgroundImageMedium});
   }
-  @media (${large}) {
+  @media (${largeQuery}) {
     background-image: url(${backgroundImageLarge});
   }
 `;

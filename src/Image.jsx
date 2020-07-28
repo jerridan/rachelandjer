@@ -1,8 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 import { Image as CloudinaryImage, Transformation } from "cloudinary-react";
-
-const descriptionHeight = 50;
+import { useMediaQuery } from "react-responsive";
+import {
+  extraSmallQuery,
+  smallQuery,
+  mediumQuery,
+  smallBreakpoint,
+  mediumBreakpoint,
+} from "./breakpoints";
 
 const ImageContainer = styled.div`
   margin: 0 auto;
@@ -10,12 +16,30 @@ const ImageContainer = styled.div`
   border-spacing: 2px;
   border-radius: 10px;
   background-color: brown;
+  @media (${extraSmallQuery}) {
+    height: 300px;
+  }
+  @media (${smallQuery}) {
+    height: 400px;
+  }
+  @media (${mediumQuery}) {
+    height: 500px;
+  }
 `;
 
 const DescriptionContainer = styled.div`
   margin: 0 auto;
+  margin-top: 15px;
   display: table;
-  height: ${descriptionHeight}px;
+  @media (${extraSmallQuery}) {
+    width: 300px;
+  }
+  @media (${smallQuery}) {
+    width: 400px;
+  }
+  @media (${mediumQuery}) {
+    width: 500px;
+  }
 `;
 
 const Description = styled.span`
@@ -23,6 +47,9 @@ const Description = styled.span`
   vertical-align: middle;
   text-align: center;
   color: brown;
+  @media (${extraSmallQuery}) {
+    font-size: 16px;
+  }
 `;
 
 const Banner = styled.div`
@@ -31,13 +58,20 @@ const Banner = styled.div`
 `;
 
 export default function Image({ image }) {
+  const smallScreen = useMediaQuery({ minWidth: smallBreakpoint });
+  const mediumScreen = useMediaQuery({ minWidth: mediumBreakpoint });
+
+  let imageWidth = 300;
+  if (smallScreen) imageWidth = 400;
+  if (mediumScreen) imageWidth = 500;
+
   return (
     <Banner>
-      <ImageContainer style={{ height: `${image.height}px` }}>
+      <ImageContainer>
         <CloudinaryImage publicId={image.name} format="png">
           <Transformation
-            height={image.height}
-            width={image.width}
+            height={imageWidth}
+            width={imageWidth}
             crop="fill"
             gravity="faces"
             quality="50"
@@ -45,9 +79,7 @@ export default function Image({ image }) {
           />
         </CloudinaryImage>
       </ImageContainer>
-      <DescriptionContainer
-        style={{ width: `${image.width}px` }}
-      >
+      <DescriptionContainer>
         <Description>{image.description}</Description>
       </DescriptionContainer>
     </Banner>
