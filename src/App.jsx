@@ -6,7 +6,6 @@ import backgroundImageExtraSmall from "./cherry_blossoms_768w.png";
 import backgroundImageSmall from "./cherry_blossoms_1024w.png";
 import backgroundImageMedium from "./cherry_blossoms_1360w.png";
 import backgroundImageLarge from "./cherry_blossoms_2000w.png";
-import backgroundImageExtraLarge from "./cherry_blossoms_4000w.png";
 import ParallaxGallery from "./ParallaxGallery";
 import { Parallax, ParallaxLayer } from "react-spring/renderprops-addons";
 
@@ -31,9 +30,6 @@ const Background = styled.div`
   }
   @media (min-width: 1360px) {
     background-image: url(${backgroundImageLarge});
-  }
-  @media (min-width: 1920px) {
-    background-image: url(${backgroundImageExtraLarge});
   }
 `;
 
