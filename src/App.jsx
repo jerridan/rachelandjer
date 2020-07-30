@@ -8,7 +8,13 @@ import backgroundImageMedium from "./cherry_blossoms_1360w.png";
 import backgroundImageLarge from "./cherry_blossoms_2000w.png";
 import ParallaxGallery from "./ParallaxGallery";
 import { Parallax, ParallaxLayer } from "react-spring/renderprops-addons";
-import { extraSmallQuery, smallQuery, mediumQuery, largeQuery } from "./breakpoints";
+import {
+  extraSmallQuery,
+  smallQuery,
+  mediumQuery,
+  largeQuery,
+} from "./breakpoints";
+import images from "./images";
 
 const Normalize = createGlobalStyle`${normalize()}`;
 
@@ -45,7 +51,7 @@ const Blurb = styled.p`
   font-size: 16px;
   text-align: center;
   color: brown;
-`
+`;
 
 export default function App() {
   let parallax;
@@ -57,7 +63,7 @@ export default function App() {
         <Background>
           <Parallax
             scrolling
-            pages={3.0}
+            pages={images.length + 1}
             ref={(ref) => (parallax = ref)}
             config={{ tension: 200, friction: 40, precision: 0.01, mass: 2 }}
           >
@@ -65,7 +71,9 @@ export default function App() {
               <Title>Rachel & Jerridan</Title>
             </ParallaxLayer>
             <ParallaxLayer offset={0.95} speed={0.5}>
-              <Blurb>These are some of my favourite captured moments with you</Blurb>
+              <Blurb>
+                These are some of my favourite captured moments with you
+              </Blurb>
             </ParallaxLayer>
             <ParallaxGallery />
           </Parallax>
