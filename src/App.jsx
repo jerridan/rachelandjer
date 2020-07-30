@@ -51,6 +51,8 @@ const Blurb = styled.p`
   font-size: 16px;
   text-align: center;
   color: brown;
+  padding-left: 15px;
+  padding-right: 15px;
 `;
 
 export default function App() {
@@ -77,7 +79,7 @@ export default function App() {
               </Blurb>
             </ParallaxLayer>
             <ParallaxGallery />
-            <ParallaxLayer offset={images.length + 0.75} speed={0.5}>
+            <ParallaxLayer offset={images.length + 0.85} speed={0.5}>
               <Blurb>What do you think we'll do next?</Blurb>
             </ParallaxLayer>
           </Parallax>
