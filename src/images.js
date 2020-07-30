@@ -34,7 +34,7 @@ export default [
   {
     name: "medieval_times.jpg",
     description:
-      "When you took me to Medieval Times for my birthday? It was so corny, I loved it!",
+      "When you took me to Medieval Times for my birthday. It was so corny, I loved it!",
   },
   {
     name: "medieval_times2.jpg",
@@ -47,7 +47,7 @@ export default [
   },
   {
     name: "ago_art_display.jpg",
-    description: "Wow you so classy babe."
+    description: "Wow, you are so classy babe."
   },
   {
     name: "kiss_in_front_of_the_castle.jpg",
