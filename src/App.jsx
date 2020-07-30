@@ -41,6 +41,12 @@ const Title = styled.div`
   color: brown;
 `;
 
+const Blurb = styled.p`
+  font-size: 16px;
+  text-align: center;
+  color: brown;
+`
+
 export default function App() {
   let parallax;
 
@@ -57,6 +63,9 @@ export default function App() {
           >
             <ParallaxLayer offset={0.5} speed={0.5}>
               <Title>Rachel & Jerridan</Title>
+            </ParallaxLayer>
+            <ParallaxLayer offset={0.95} speed={0.5}>
+              <Blurb>These are some of my favourite captured moments with you</Blurb>
             </ParallaxLayer>
             <ParallaxGallery />
           </Parallax>
