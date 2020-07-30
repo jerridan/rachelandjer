@@ -12,10 +12,10 @@ import {
 
 const ImageContainer = styled.div`
   margin: 0 auto;
-  border: 4px solid brown;
+  border: 4px solid #633b41;
   border-spacing: 2px;
   border-radius: 10px;
-  background-color: brown;
+  background-color: #633b41;
   @media (${extraSmallQuery}) {
     height: 300px;
   }
