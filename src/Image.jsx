@@ -16,8 +16,11 @@ const ImageContainer = styled.div`
   border-spacing: 2px;
   border-radius: 10px;
   background-color: #633b41;
-  @media (${extraSmallQuery}) {
+  @media (${extraSmallQuery}) and (orientation: portrait) {
     height: 300px;
+  }
+  @media (${extraSmallQuery}) and (orientation: landscape) {
+    height: 250px;
   }
   @media (${smallQuery}) {
     height: 400px;
@@ -60,17 +63,21 @@ const Banner = styled.div`
 export default function Image({ image }) {
   const smallScreen = useMediaQuery({ minWidth: smallBreakpoint });
   const mediumScreen = useMediaQuery({ minWidth: mediumBreakpoint });
+  const landscape = useMediaQuery({ orientation: "landscape" });
 
   let imageWidth = 300;
   if (smallScreen) imageWidth = 400;
   if (mediumScreen) imageWidth = 500;
+
+  let imageHeight = imageWidth;
+  if (landscape && !smallScreen) imageHeight -= 50;
 
   return (
     <Banner>
       <ImageContainer>
         <CloudinaryImage publicId={image.name} format="png">
           <Transformation
-            height={imageWidth}
+            height={imageHeight}
             width={imageWidth}
             crop="fill"
             gravity="faces"
