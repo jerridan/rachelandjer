@@ -70,12 +70,16 @@ export default function App() {
             <ParallaxLayer offset={0.5} speed={0.5}>
               <Title>Rachel & Jerridan</Title>
             </ParallaxLayer>
-            <ParallaxLayer offset={0.95} speed={0.5}>
+            <ParallaxLayer offset={0.75} speed={0.5}>
               <Blurb>
-                These are some of my favourite captured moments with you
+                We've had some really fun times together! These are some of my
+                favourite captured moments with you.
               </Blurb>
             </ParallaxLayer>
             <ParallaxGallery />
+            <ParallaxLayer offset={images.length + 0.75} speed={0.5}>
+              <Blurb>What do you think we'll do next?</Blurb>
+            </ParallaxLayer>
           </Parallax>
         </Background>
       </CloudinaryContext>
