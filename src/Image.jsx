@@ -37,6 +37,9 @@ const DescriptionContainer = styled.div`
   @media (${extraSmallQuery}) {
     width: 300px;
   }
+  @media (${extraSmallQuery}) and (orientation: landscape) {
+    width: 450px;
+  }
   @media (${smallQuery}) {
     width: 400px;
   }
@@ -81,7 +84,7 @@ export default function Image({ image }) {
             width={imageWidth}
             crop="fill"
             gravity="faces"
-            quality="50"
+            quality="100"
             radius="10"
           />
         </CloudinaryImage>
