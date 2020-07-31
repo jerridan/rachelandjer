@@ -69,17 +69,17 @@ export default function App() {
             ref={(ref) => (parallax = ref)}
             config={{ tension: 200, friction: 40, precision: 0.01, mass: 2 }}
           >
-            <ParallaxLayer offset={0.5} speed={0.5}>
+            <ParallaxLayer offset={0.5} speed={1.0}>
               <Title>Rachel & Jerridan</Title>
             </ParallaxLayer>
-            <ParallaxLayer offset={0.75} speed={0.5}>
+            <ParallaxLayer offset={0.75} speed={1.0}>
               <Blurb>
                 We've had some really fun times together! These are some of my
                 favourite captured moments with you.
               </Blurb>
             </ParallaxLayer>
             <ParallaxGallery />
-            <ParallaxLayer offset={images.length + 0.85} speed={0.5}>
+            <ParallaxLayer offset={images.length + 0.85} speed={1.0}>
               <Blurb>What do you think we'll do next?</Blurb>
             </ParallaxLayer>
           </Parallax>

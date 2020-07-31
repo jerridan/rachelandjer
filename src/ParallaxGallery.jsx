@@ -7,7 +7,7 @@ export default function ParallaxGallery() {
   return (
     <>
       {images.map((image, index) => (
-        <ParallaxLayer offset={index + 1} speed={0.5}>
+        <ParallaxLayer offset={index + 1.0} speed={1.0} key={index}>
           <Image image={image} />
         </ParallaxLayer>
       ))}
