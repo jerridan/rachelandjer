@@ -65,7 +65,7 @@ export default function App() {
         <Background>
           <Parallax
             scrolling
-            pages={images.length + 1}
+            pages={images.length + 2}
             ref={(ref) => (parallax = ref)}
             config={{ tension: 200, friction: 20 }}
           >
@@ -79,7 +79,7 @@ export default function App() {
               </Blurb>
             </ParallaxLayer>
             <ParallaxGallery />
-            <ParallaxLayer offset={images.length + 0.85} speed={1.0}>
+            <ParallaxLayer offset={images.length + 1.5} speed={1.0}>
               <Blurb>What do you think we'll do next?</Blurb>
             </ParallaxLayer>
           </Parallax>
