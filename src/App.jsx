@@ -67,7 +67,7 @@ export default function App() {
             scrolling
             pages={images.length + 1}
             ref={(ref) => (parallax = ref)}
-            config={{ tension: 200, friction: 40, precision: 0.01, mass: 2 }}
+            config={{ tension: 200, friction: 20 }}
           >
             <ParallaxLayer offset={0.5} speed={1.0}>
               <Title>Rachel & Jerridan</Title>
