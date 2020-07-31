@@ -32,7 +32,7 @@ const ImageContainer = styled.div`
 
 const DescriptionContainer = styled.div`
   margin: 0 auto;
-  padding-top: 15px;
+  padding-top: 10px;
   display: table;
   @media (${extraSmallQuery}) {
     width: 300px;
