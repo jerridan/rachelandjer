@@ -1,7 +1,5 @@
 import React, { Fragment } from "react";
-import { normalize } from "polished";
-import styled, { createGlobalStyle } from "styled-components";
-import { CloudinaryContext } from "cloudinary-react";
+import styled from "styled-components";
 import backgroundImageExtraSmall from "./cherry_blossoms_768w.png";
 import backgroundImageSmall from "./cherry_blossoms_1024w.png";
 import backgroundImageMedium from "./cherry_blossoms_1360w.png";
@@ -15,8 +13,6 @@ import {
   largeQuery,
 } from "./breakpoints";
 import images from "./images";
-
-const Normalize = createGlobalStyle`${normalize()}`;
 
 const Background = styled.div`
   position: absolute;
@@ -55,13 +51,11 @@ const Blurb = styled.p`
   padding-right: 15px;
 `;
 
-export default function App() {
+export default function Timeline() {
   let parallax;
 
   return (
     <Fragment>
-      <Normalize />
-      <CloudinaryContext cloudName={process.env.CLOUDINARY_CLOUD_NAME}>
         <Background>
           <Parallax
             scrolling
@@ -84,7 +78,6 @@ export default function App() {
             </ParallaxLayer>
           </Parallax>
         </Background>
-      </CloudinaryContext>
     </Fragment>
   );
 }
