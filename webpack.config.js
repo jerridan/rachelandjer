@@ -2,6 +2,9 @@ const HtmlWebPackPlugin = require("html-webpack-plugin");
 const DotEnvPlugin = require("dotenv-webpack");
 
 module.exports = {
+  devServer: {
+    historyApiFallback: true,
+  },
   devtool: "eval-cheap-source-map",
   module: {
     rules: [

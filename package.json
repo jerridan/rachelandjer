@@ -17,6 +17,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-responsive": "^8.1.0",
+    "react-router-dom": "^5.2.0",
     "react-spring": "^8.0.27",
     "styled-components": "^5.1.1",
     "webfontloader": "^1.6.28"
@@ -30,7 +31,6 @@
     "css-loader": "^3.6.0",
     "dotenv-webpack": "^2.0.0",
     "file-loader": "^6.0.0",
-    "html-loader": "^1.1.0",
     "html-webpack-plugin": "^4.3.0",
     "prettier": "^2.0.5",
     "style-loader": "^1.2.1",
