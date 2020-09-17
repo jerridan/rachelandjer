@@ -5,7 +5,7 @@ import App from "./App";
 
 WebFont.load({
   google: {
-    families: ["Poiret One", "Lora", "Vesper Libre:400", "sans-serif"],
+    families: ["Lora", "Tangerine", "sans-serif"],
   },
 });
 

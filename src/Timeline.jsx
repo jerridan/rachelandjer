@@ -18,7 +18,7 @@ const Background = styled.div`
   position: absolute;
   height: 100vh;
   width: 100%;
-  font-family: "Vesper Libre", serif;
+  font-family: Lora, serif;
   background-position-y: 35%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -37,8 +37,8 @@ const Background = styled.div`
 `;
 
 const Title = styled.div`
-  font-family: "Poiret One", serif;
-  font-size: 40px;
+  font-family: Tangerine, serif;
+  font-size: 55px;
   text-align: center;
   color: brown;
 `;
