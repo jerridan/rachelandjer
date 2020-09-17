@@ -2,13 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Image as CloudinaryImage, Transformation } from "cloudinary-react";
 import { useMediaQuery } from "react-responsive";
-import {
-  extraSmallQuery,
-  smallQuery,
-  mediumQuery,
-  smallBreakpoint,
-  mediumBreakpoint,
-} from "./breakpoints";
+import { extraSmall, small } from "./breakpoints";
 
 const ImageContainer = styled.div`
   margin: 0 auto;
@@ -16,16 +10,16 @@ const ImageContainer = styled.div`
   border-spacing: 2px;
   border-radius: 10px;
   background-color: #633b41;
-  @media (${extraSmallQuery}) and (orientation: portrait) {
+  @media (orientation: portrait) {
     height: 300px;
   }
-  @media (${extraSmallQuery}) and (orientation: landscape) {
+  @media (orientation: landscape) {
     height: 250px;
   }
-  @media (${smallQuery}) {
+  @media (min-width: ${extraSmall}px) {
     height: 400px;
   }
-  @media (${mediumQuery}) {
+  @media (min-width: ${small}px) {
     height: 500px;
   }
 `;
@@ -34,16 +28,14 @@ const DescriptionContainer = styled.div`
   margin: 0 auto;
   padding-top: 10px;
   display: table;
-  @media (${extraSmallQuery}) {
-    width: 300px;
-  }
-  @media (${extraSmallQuery}) and (orientation: landscape) {
+  width: 300px;
+  @media (min-width: 0px) and (orientation: landscape) {
     width: 450px;
   }
-  @media (${smallQuery}) {
+  @media (min-width: ${extraSmall}px) {
     width: 400px;
   }
-  @media (${mediumQuery}) {
+  @media (min-width: ${small}px) {
     width: 500px;
   }
 `;
@@ -53,9 +45,7 @@ const Description = styled.span`
   vertical-align: middle;
   text-align: center;
   color: brown;
-  @media (${extraSmallQuery}) {
-    font-size: 16px;
-  }
+  font-size: 16px;
 `;
 
 const Banner = styled.div`
@@ -64,8 +54,8 @@ const Banner = styled.div`
 `;
 
 export default function Image({ image }) {
-  const smallScreen = useMediaQuery({ minWidth: smallBreakpoint });
-  const mediumScreen = useMediaQuery({ minWidth: mediumBreakpoint });
+  const smallScreen = useMediaQuery({ minWidth: extraSmall });
+  const mediumScreen = useMediaQuery({ minWidth: small });
   const landscape = useMediaQuery({ orientation: "landscape" });
 
   let imageWidth = 300;
