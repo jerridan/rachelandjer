@@ -10,7 +10,8 @@
   },
   "dependencies": {
     "@brainhubeu/react-carousel": "^1.19.22",
-    "cloudinary-react": "^1.6.2",
+    "cloudinary-core": "^2.11.2",
+    "cloudinary-react": "^1.6.6",
     "dropbox": "^5.2.0",
     "lodash": "^4.17.19",
     "polished": "^3.6.5",
