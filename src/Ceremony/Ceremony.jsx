@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { extraSmall, small, medium, large } from "./breakpoints";
+import { extraSmall, small, medium, large } from "../breakpoints";
 import backgroundImageExtraSmall from "./leafy_green_bg/leafy_green_bg_768x512.jpg";
 import backgroundImageSmall from "./leafy_green_bg/leafy_green_bg_1024x683.jpg";
 import backgroundImageMedium from "./leafy_green_bg/leafy_green_bg_1360x907.jpg";

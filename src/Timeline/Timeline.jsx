@@ -7,7 +7,7 @@ import backgroundImageLarge from "./cherry_blossoms/cherry_blossoms_1920x1920.jp
 import backgroundImageExtraLarge from "./cherry_blossoms/cherry_blossoms_2400x2400.jpg";
 import ParallaxGallery from "./ParallaxGallery";
 import { Parallax, ParallaxLayer } from "react-spring/renderprops-addons";
-import { extraSmall, small, medium, large } from "./breakpoints";
+import { extraSmall, small, medium, large } from "../breakpoints";
 import images from "./images";
 
 const Background = styled.div`

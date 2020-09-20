@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import Timeline from "./Timeline";
+import Timeline from "./Timeline/Timeline";
 import Home from "./Home";
-import Ceremony from "./Ceremony";
+import Ceremony from "./Ceremony/Ceremony";
 
 export default function RouterComponent() {
   return (

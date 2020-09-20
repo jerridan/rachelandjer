@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Image as CloudinaryImage, Transformation } from "cloudinary-react";
 import { useMediaQuery } from "react-responsive";
-import { extraSmall, small } from "./breakpoints";
+import { extraSmall, small } from "../breakpoints";
 
 const ImageContainer = styled.div`
   margin: 0 auto;
