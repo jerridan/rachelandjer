@@ -1,7 +1,7 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import Background from "../Background";
+import Navigation from "../Navigation/Navigation";
 
 export default function Home() {
   const Names = styled.p`
@@ -24,48 +24,9 @@ export default function Home() {
     color: #373d3f;
   `;
 
-  const Navigation = styled.nav`
-    position: absolute;
-    top: 70px;
-    left: 100px;
-    font-family: Lora, serif;
-  `;
-
-  const NavListItem = styled.li`
-    list-style: none;
-    height: 45px;
-    font-size: 14px;
-    color: #373d3f;
-
-    a {
-      text-decoration: none;
-      color: inherit;
-      padding: 5px;
-      &:hover {
-        color: #838a62;
-      }
-    }
-  `;
-
   return (
     <Background>
-      <Navigation>
-        <ul>
-          <NavListItem>
-            <NavLink to="/" activeStyle={{ borderBottom: "1px solid #373d3f" }}>
-              Home
-            </NavLink>
-          </NavListItem>
-          <NavListItem>
-            <NavLink
-              to="/ceremony"
-              activeStyle={{ borderBottom: "1px solid #373d3f" }}
-            >
-              Ceremony
-            </NavLink>
-          </NavListItem>
-        </ul>
-      </Navigation>
+      <Navigation />
       <Content>
         <Names>Rachel & Jerridan</Names>
         <Details>Are Getting Married</Details>
