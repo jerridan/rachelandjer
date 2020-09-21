@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Background from "../Background";
+import Navigation from "../Navigation/Navigation";
 
 const Welcome = styled.div`
   text-align: center;
@@ -37,6 +38,7 @@ const Date = styled.p`
 export default function Ceremony() {
   return (
     <Background>
+      <Navigation />
       <Welcome>
         <Names>Rachel & Jerridan</Names>
         <Date>October 24, 2020 at 4:30 est</Date>
