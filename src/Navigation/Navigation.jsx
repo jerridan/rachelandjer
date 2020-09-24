@@ -35,6 +35,9 @@ export default function Navigation() {
         <NavListItem>
           <Link to="/ceremony">Ceremony</Link>
         </NavListItem>
+        <NavListItem>
+          <Link to="/registry">Registry</Link>
+        </NavListItem>
       </ul>
     </Navigation>
   );
