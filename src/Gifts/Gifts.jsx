@@ -79,6 +79,7 @@ export default function Gifts() {
         <Form
           className="kwes-form"
           action="https://kwes.io/api/foreign/forms/u0pubsxkBcKWNmbI3Qch"
+          data-kw-redirect="/message-sent"
         >
           <Field>
             <Label htmlFor="name">Full Name</Label>
