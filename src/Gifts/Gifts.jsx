@@ -3,7 +3,7 @@ import Background from "../Background";
 import Navigation from "../Navigation/Navigation";
 import styled from "styled-components";
 
-export default function Registry() {
+export default function Gifts() {
   const kwesScript = document.createElement("script");
 
   kwesScript.setAttribute("src", "https://kwes.io/v2/kwes-script.js");
@@ -41,7 +41,7 @@ export default function Registry() {
     <Background>
       <Navigation />
       <Content>
-        <Title>Registry</Title>
+        <Title>Gifts</Title>
         <Details>To all of our guests,</Details>
         <Details>
           We would be honoured to have you simply witness our ceremony. Please

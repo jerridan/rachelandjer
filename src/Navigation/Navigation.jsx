@@ -15,7 +15,7 @@ export default function Navigation() {
       <ul>
         <Link to="/">Home</Link>
         <Link to="/ceremony">Ceremony</Link>
-        <Link to="/registry">Registry</Link>
+        <Link to="/gifts">Gifts</Link>
       </ul>
     </Navigation>
   );
