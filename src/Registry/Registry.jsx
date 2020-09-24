@@ -4,6 +4,13 @@ import Navigation from "../Navigation/Navigation";
 import styled from "styled-components";
 
 export default function Registry() {
+  const kwesScript = document.createElement("script");
+
+  kwesScript.setAttribute("src", "https://kwes.io/v2/kwes-script.js");
+  kwesScript.setAttribute("charset", "utf-8");
+
+  document.head.appendChild(kwesScript);
+
   const Content = styled.div`
     background-color: #f9f9f9;
     text-align: center;
@@ -37,8 +44,7 @@ export default function Registry() {
         <Title>Registry</Title>
         <Details>To all of our guests,</Details>
         <Details>
-          We would be honoured to have you simply witness our ceremony. As our
-          wedding will be quite small, we will also have few expenses. Please
+          We would be honoured to have you simply witness our ceremony. Please
           feel no obligation to give a gift, especially during these times.
         </Details>
         <Details>
@@ -51,6 +57,18 @@ export default function Registry() {
           </a>
           , or if you prefer, send us an e-transfer.
         </Details>
+        <form
+          className="kwes-form"
+          action="https://kwes.io/api/foreign/forms/u0pubsxkBcKWNmbI3Qch"
+        >
+          <label for="name">Full Name</label>
+          <input name="name" type="text" rules="required" />
+          <label for="email">Email</label>
+          <input name="email" type="email" rules="required|email" />
+          <label for="message">Message (optional)</label>
+          <input name="message" type="text" />
+          <button type="submit">Submit</button>
+        </form>
       </Content>
     </Background>
   );
