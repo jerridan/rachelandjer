@@ -11,7 +11,7 @@ const Content = styled.div`
   padding: 50px;
 `;
 
-const Names = styled.p`
+const Title = styled.p`
   margin-top: 25px;
   margin-bottom: 25px;
   letter-spacing: 0.3em;
@@ -24,6 +24,7 @@ const Details = styled.p`
   margin-bottom: 20px;
   letter-spacing: 0.1em;
   font-size: 16px;
+  max-width: 750px;
 `;
 
 const Date = styled.p`
@@ -39,7 +40,7 @@ export default function Ceremony() {
     <Background>
       <Navigation />
       <Content>
-        <Names>The Wedding Day</Names>
+        <Title>The Wedding Day</Title>
         <Date>October 24, 2020 at 4:30 est</Date>
         <Details>Thank you for joining us as we share our vows!</Details>
         <Details>
