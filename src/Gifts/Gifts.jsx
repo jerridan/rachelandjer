@@ -2,6 +2,7 @@ import React from "react";
 import Background from "../Background";
 import Navigation from "../Navigation/Navigation";
 import styled from "styled-components";
+import "./kwesFormOverrides.css";
 
 export default function Gifts() {
   const kwesScript = document.createElement("script");
@@ -37,6 +38,20 @@ export default function Gifts() {
     line-height: 1.25em;
   `;
 
+  const Form = styled.form`
+    text-align: left;
+  `;
+
+  const Field = styled.div`
+    display: block;
+    padding-bottom: 10px;
+  `;
+
+  const Label = styled.label`
+    width: 150px;
+    display: inline-block;
+  `;
+
   return (
     <Background>
       <Navigation />
@@ -55,20 +70,30 @@ export default function Gifts() {
           >
             here
           </a>
-          , or if you prefer, send us an e-transfer.
+          . You can also send us an e-transfer if you like.
         </Details>
-        <form
+        <Details>
+          If you have any questions, feel free to get in touch or use the form
+          below.
+        </Details>
+        <Form
           className="kwes-form"
           action="https://kwes.io/api/foreign/forms/u0pubsxkBcKWNmbI3Qch"
         >
-          <label for="name">Full Name</label>
-          <input name="name" type="text" rules="required" />
-          <label for="email">Email</label>
-          <input name="email" type="email" rules="required|email" />
-          <label for="message">Message (optional)</label>
-          <input name="message" type="text" />
+          <Field>
+            <Label htmlFor="name">Full Name</Label>
+            <input name="name" type="text" rules="required" />
+          </Field>
+          <Field>
+            <Label htmlFor="email">Email</Label>
+            <input name="email" type="email" rules="required|email" />
+          </Field>
+          <Field>
+            <Label htmlFor="message">Message (optional)</Label>
+            <input name="message" type="text" />
+          </Field>
           <button type="submit">Submit</button>
-        </form>
+        </Form>
       </Content>
     </Background>
   );
