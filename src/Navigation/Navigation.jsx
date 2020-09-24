@@ -10,31 +10,12 @@ export default function Navigation() {
     font-family: Lora, serif;
   `;
 
-  const NavListItem = styled.li`
-    list-style: none;
-    height: 45px;
-    font-size: 14px;
-    color: #373d3f;
-
-    a {
-      text-decoration: none;
-      color: inherit;
-      padding-bottom: 5px;
-      &:hover {
-        color: #838a62;
-      }
-    }
-  `;
-
   return (
     <Navigation>
       <ul>
-        <NavListItem>
-          <Link to="/">Home</Link>
-        </NavListItem>
-        <NavListItem>
-          <Link to="/ceremony">Ceremony</Link>
-        </NavListItem>
+        <Link to="/">Home</Link>
+        <Link to="/ceremony">Ceremony</Link>
+        <Link to="/gifts">Gifts</Link>
       </ul>
     </Navigation>
   );
