@@ -1,10 +1,10 @@
 import React, { Fragment } from "react";
 import styled from "styled-components";
-import backgroundImageExtraSmall from "./cherry_blossoms/cherry_blossoms_768x768.jpg";
-import backgroundImageSmall from "./cherry_blossoms/cherry_blossoms_1024x1024.jpg";
-import backgroundImageMedium from "./cherry_blossoms/cherry_blossoms_1360x1360.jpg";
-import backgroundImageLarge from "./cherry_blossoms/cherry_blossoms_1920x1920.jpg";
-import backgroundImageExtraLarge from "./cherry_blossoms/cherry_blossoms_2400x2400.jpg";
+import backgroundImageExtraSmall from "../images/cherry_blossoms/cherry_blossoms_768x768.jpg";
+import backgroundImageSmall from "../images/cherry_blossoms/cherry_blossoms_1024x1024.jpg";
+import backgroundImageMedium from "../images/cherry_blossoms/cherry_blossoms_1360x1360.jpg";
+import backgroundImageLarge from "../images/cherry_blossoms/cherry_blossoms_1920x1920.jpg";
+import backgroundImageExtraLarge from "../images/cherry_blossoms/cherry_blossoms_2400x2400.jpg";
 import ParallaxGallery from "./ParallaxGallery";
 import { Parallax, ParallaxLayer } from "react-spring/renderprops-addons";
 import { extraSmall, small, medium, large } from "../breakpoints";
