@@ -1,22 +1,15 @@
-import React from "react";
-import styled from "styled-components";
-import Link from "./Link";
+import React, { Fragment } from "react";
+import { useMediaQuery } from "react-responsive";
+import { small } from "../breakpoints";
+import DesktopNavigation from "./DesktopNavigation";
+import MobileNavigation from "./MobileNavigation";
 
 export default function Navigation() {
-  const Navigation = styled.nav`
-    position: absolute;
-    top: 70px;
-    left: 100px;
-    font-family: Lora, serif;
-  `;
+  const isMobileScreen = useMediaQuery({ maxWidth: small });
 
   return (
-    <Navigation>
-      <ul>
-        <Link to="/">Home</Link>
-        <Link to="/ceremony">Ceremony</Link>
-        <Link to="/gifts">Gifts</Link>
-      </ul>
-    </Navigation>
+    <Fragment>
+      {isMobileScreen ? <MobileNavigation /> : <DesktopNavigation />}
+    </Fragment>
   );
 }
