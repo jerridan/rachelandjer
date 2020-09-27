@@ -50,6 +50,20 @@ export default function Gifts() {
   const Label = styled.label`
     width: 150px;
     display: inline-block;
+    vertical-align: top;
+    padding-top: 5px;
+  `;
+
+  const TextArea = styled.textarea`
+    width: 350px;
+    padding: 5px;
+    border: 1px solid #373d3f;
+  `;
+
+  const Input = styled.input`
+    width: 350px;
+    padding: 5px;
+    border: 1px solid #373d3f;
   `;
 
   return (
@@ -83,15 +97,15 @@ export default function Gifts() {
         >
           <Field>
             <Label htmlFor="name">Full Name</Label>
-            <input name="name" type="text" rules="required" />
+            <Input name="name" type="text" rules="required" />
           </Field>
           <Field>
             <Label htmlFor="email">Email</Label>
-            <input name="email" type="email" rules="required|email" />
+            <Input name="email" type="email" rules="required|email" />
           </Field>
           <Field>
             <Label htmlFor="message">Message (optional)</Label>
-            <input name="message" type="text" />
+            <TextArea name="message" type="text" rows="3" />
           </Field>
           <button type="submit">Submit</button>
         </Form>
