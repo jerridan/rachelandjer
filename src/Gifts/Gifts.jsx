@@ -104,8 +104,8 @@ export default function Gifts() {
             <Input name="email" type="email" rules="required|email" />
           </Field>
           <Field>
-            <Label htmlFor="message">Message (optional)</Label>
-            <TextArea name="message" type="text" rows="3" />
+            <Label htmlFor="message">Message</Label>
+            <TextArea name="message" type="text" rows="3" rules="required" />
           </Field>
           <button type="submit">Submit</button>
         </Form>
