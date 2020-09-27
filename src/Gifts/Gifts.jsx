@@ -55,13 +55,13 @@ export default function Gifts() {
   `;
 
   const TextArea = styled.textarea`
-    width: 350px;
+    width: 100%;
     padding: 5px;
     border: 1px solid #373d3f;
   `;
 
   const Input = styled.input`
-    width: 350px;
+    width: 100%;
     padding: 5px;
     border: 1px solid #373d3f;
   `;
