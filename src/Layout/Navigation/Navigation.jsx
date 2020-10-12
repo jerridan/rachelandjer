@@ -7,9 +7,5 @@ import MobileNavigation from "./MobileNavigation";
 export default function Navigation() {
   const isMobileScreen = useMediaQuery({ maxWidth: small });
 
-  return (
-    <Fragment>
-      {isMobileScreen ? <MobileNavigation /> : <DesktopNavigation />}
-    </Fragment>
-  );
+  return <>{isMobileScreen ? <MobileNavigation /> : <DesktopNavigation />}</>;
 }

@@ -1,6 +1,6 @@
 import React from "react";
-import Layout from "../../Layout/Layout";
 import styled from "styled-components";
+import Layout from "../../Layout/Layout";
 import "./kwesFormOverrides.css";
 import theme from "../../theme";
 
@@ -77,6 +77,7 @@ export default function Gifts() {
           If you would like to give a gift, you can find our registry{" "}
           <a
             target="_blank"
+            rel="noopener noreferrer"
             href="https://www.myregistry.com/wedding-website/rachel-hon-and-jerridan-quiring-toronto-on/2537277/welcomemessage"
           >
             here

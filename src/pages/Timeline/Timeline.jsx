@@ -1,15 +1,15 @@
 import React, { Fragment } from "react";
 import styled from "styled-components";
+import { Parallax, ParallaxLayer } from "react-spring/renderprops-addons";
 import backgroundImageExtraSmall from "../../images/cherry_blossoms/cherry_blossoms_768x768.jpg";
 import backgroundImageSmall from "../../images/cherry_blossoms/cherry_blossoms_1024x1024.jpg";
 import backgroundImageMedium from "../../images/cherry_blossoms/cherry_blossoms_1360x1360.jpg";
 import backgroundImageLarge from "../../images/cherry_blossoms/cherry_blossoms_1920x1920.jpg";
 import backgroundImageExtraLarge from "../../images/cherry_blossoms/cherry_blossoms_2400x2400.jpg";
-import ParallaxGallery from "./ParallaxGallery";
-import { Parallax, ParallaxLayer } from "react-spring/renderprops-addons";
-import { extraSmall, small, medium, large } from "../../breakpoints";
-import images from "./images";
+import { extraSmall, large, medium, small } from "../../breakpoints";
 import theme from "../../theme";
+import ParallaxGallery from "./ParallaxGallery";
+import images from "./images";
 
 const Background = styled.div`
   position: absolute;
@@ -49,15 +49,12 @@ const Blurb = styled.p`
 `;
 
 export default function Timeline() {
-  let parallax;
-
   return (
-    <Fragment>
+    <>
       <Background>
         <Parallax
           scrolling
           pages={images.length + 2}
-          ref={(ref) => (parallax = ref)}
           config={{
             mass: 0.1,
             tension: 210,
@@ -71,16 +68,16 @@ export default function Timeline() {
           </ParallaxLayer>
           <ParallaxLayer offset={0.75} speed={1.0}>
             <Blurb>
-              We've had some really fun times together! These are some of my
-              favourite captured moments with you.
+              We&apos;ve had some really fun times together! These are some of
+              my favourite captured moments with you.
             </Blurb>
           </ParallaxLayer>
           <ParallaxGallery />
           <ParallaxLayer offset={images.length + 1.5} speed={1.0}>
-            <Blurb>What do you think we'll do next?</Blurb>
+            <Blurb>What do you think we&apos;ll do next?</Blurb>
           </ParallaxLayer>
         </Parallax>
       </Background>
-    </Fragment>
+    </>
   );
 }

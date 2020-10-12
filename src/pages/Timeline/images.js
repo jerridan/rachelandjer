@@ -47,7 +47,7 @@ export default [
   },
   {
     name: "ago_art_display.jpg",
-    description: "Wow, you are so classy babe."
+    description: "Wow, you are so classy babe.",
   },
   {
     name: "kiss_in_front_of_the_castle.jpg",
@@ -59,27 +59,29 @@ export default [
   },
   {
     name: "millennium_falcon.jpg",
-    description: "Oh my goodness and we got to see the millennium falcon!"
+    description: "Oh my goodness and we got to see the millennium falcon!",
   },
   {
     name: "wookie_backpack.jpg",
-    description: "I love how goofy you are."
+    description: "I love how goofy you are.",
   },
   {
     name: "hike_with_friends.jpg",
-    description: "That time we took our friends for a hike up a muddy hill."
+    description: "That time we took our friends for a hike up a muddy hill.",
   },
   {
     name: "brickworks_in_the_fall.jpg",
-    description: "When we took that beautiful fall hike at Brick Works to see the changing colours."
+    description:
+      "When we took that beautiful fall hike at Brick Works to see the changing colours.",
   },
   {
     name: "ey_christmas_party.jpg",
-    description: "Um. Do you want to be alone with that wine?"
+    description: "Um. Do you want to be alone with that wine?",
   },
   {
     name: "nulogy_christmas_party.jpg",
-    description: "Remember when we dressed up for Nulogy's Gatsby party? My coworkers couldn't believe I danced in public."
+    description:
+      "Remember when we dressed up for Nulogy's Gatsby party? My coworkers couldn't believe I danced in public.",
   },
   {
     name: "valentines_day.jpg",
@@ -90,15 +92,16 @@ export default [
   },
   {
     name: "rachels_birthday_dinner.jpg",
-    description: "The AMAZING dinner we had for your birthday!"
+    description: "The AMAZING dinner we had for your birthday!",
   },
   {
     name: "laser_tag_party.jpg",
-    description: "And the super fun laser tag party you threw for all of your friends."
+    description:
+      "And the super fun laser tag party you threw for all of your friends.",
   },
   {
     name: "ripleys.jpg",
-    description: "Our last pre-quarantine outing at Ripleys."
+    description: "Our last pre-quarantine outing at Ripleys.",
   },
   {
     name: "quarantine_iced_cream.jpg",

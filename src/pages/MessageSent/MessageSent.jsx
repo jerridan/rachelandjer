@@ -31,7 +31,7 @@ export default function MessageSent() {
       <Content>
         <Title>Success!</Title>
         <Details>
-          Thanks for the message. We'll get in touch with you soon!
+          Thanks for the message. We&apos;ll get in touch with you soon!
         </Details>
         <Details>From Jerridan & Rachel</Details>
       </Content>

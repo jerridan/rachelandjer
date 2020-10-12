@@ -1,0 +1,48 @@
+{
+  "extends": ["airbnb", "prettier"],
+  "plugins": ["@babel", "react-hooks", "prettier"],
+  "env": {
+    "browser": true
+  },
+  "parser": "@babel/eslint-parser",
+  "rules": {
+    "prettier/prettier": "error",
+    "import/named": [0],
+    "import/no-named-default": [0],
+    "import/order": [
+      "error",
+      { "groups": ["builtin", "external", "parent", "sibling", "index"] }
+    ],
+    "import/prefer-default-export": [0],
+    "jsx-a11y/label-has-associated-control": [0],
+    "jsx-a11y/label-has-for": [0],
+    "jsx-a11y/no-autofocus": [0],
+    "no-else-return": "off",
+    "no-plusplus": [2, { "allowForLoopAfterthoughts": true }],
+    "no-unused-vars": [2, { "args": "after-used", "argsIgnorePattern": "^_" }],
+    "no-use-before-define": "off",
+    "padding-line-between-statements": [
+      "error",
+      { "blankLine": "always", "prev": "*", "next": "return" }
+    ],
+    "quotes": [
+      "error",
+      "double",
+      { "avoidEscape": true, "allowTemplateLiterals": false }
+    ],
+    "react/destructuring-assignment": [0],
+    "react/forbid-prop-types": [0],
+    "react/jsx-one-expression-per-line": [0],
+    "react/no-multi-comp": [0],
+    "react/prop-types": "off",
+    "react/no-danger": "off",
+    "react/require-default-props": [0],
+    "sort-imports": [
+      "error",
+      {
+        "ignoreDeclarationSort": true
+      }
+    ],
+    "no-restricted-imports": [2, { "paths": ["lodash"] }]
+  }
+}
