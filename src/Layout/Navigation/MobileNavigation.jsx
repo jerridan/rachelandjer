@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { Transition } from "react-transition-group";
+import MenuSvg from "../../icons/MenuSvg";
+import theme from "../../theme";
 import Link from "./Link";
-import MenuSvg from "../icons/MenuSvg";
 
 const defaultStyle = {
-  transition: `height 500ms ease-in-out`,
+  transition: "height 500ms ease-in-out",
   height: "50px",
 };
 
@@ -26,14 +27,12 @@ const MenuPanel = styled.nav`
   bottom: 0;
   width: 100%;
   background-color: #e3e3e3;
-  font-family: Lora, serif;
 `;
 
 const MenuTitle = styled.span`
-  font-size: 16px;
+  font-size: ${theme.fontSizes.medium};
   padding-left: 5px;
   line-height: 30px;
-  color: #373d3f;
 `;
 
 const IconWrapper = styled.div`
@@ -64,7 +63,7 @@ export default function MobileNavigation() {
         >
           <MenuButton>
             <IconWrapper>
-              <MenuSvg fill="#f9f9f9" width="14px" />
+              <MenuSvg fill={theme.colors.white} width="14px" />
             </IconWrapper>
             <MenuTitle>MENU</MenuTitle>
           </MenuButton>

@@ -1,33 +1,13 @@
 import React from "react";
-import Background from "../Background";
-import Navigation from "../Navigation/Navigation";
 import styled from "styled-components";
+import Layout from "../../Layout/Layout";
 import "./kwesFormOverrides.css";
+import Content from "../../components/Content";
+import SharedDetails from "../../components/Details";
+import Title from "../../components/Title";
 
-const Content = styled.div`
-  background-color: #f9f9f9;
-  text-align: center;
-  font-family: Lora, serif;
-  color: #373d3f;
-  padding: 50px;
-`;
-
-const Title = styled.p`
-  margin-top: 25px;
-  margin-bottom: 25px;
-  letter-spacing: 0.3em;
-  font-family: Tangerine, serif;
-  font-size: 50px;
-`;
-
-const Details = styled.p`
-  margin-top: 20px;
-  margin-bottom: 20px;
-  letter-spacing: 0.1em;
-  font-size: 16px;
-  max-width: 750px;
+const Details = styled(SharedDetails)`
   text-align: left;
-  line-height: 1.25em;
 `;
 
 const Form = styled.form`
@@ -67,8 +47,7 @@ export default function Gifts() {
   document.head.appendChild(kwesScript);
 
   return (
-    <Background>
-      <Navigation />
+    <Layout>
       <Content>
         <Title>Gifts</Title>
         <Details>To all of our guests,</Details>
@@ -80,6 +59,7 @@ export default function Gifts() {
           If you would like to give a gift, you can find our registry{" "}
           <a
             target="_blank"
+            rel="noopener noreferrer"
             href="https://www.myregistry.com/wedding-website/rachel-hon-and-jerridan-quiring-toronto-on/2537277/welcomemessage"
           >
             here
@@ -110,6 +90,6 @@ export default function Gifts() {
           <button type="submit">Submit</button>
         </Form>
       </Content>
-    </Background>
+    </Layout>
   );
 }

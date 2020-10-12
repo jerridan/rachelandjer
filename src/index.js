@@ -5,8 +5,9 @@ import App from "./App";
 
 WebFont.load({
   google: {
-    families: ["Lora", "Tangerine", "sans-serif"],
+    families: ["Lora", "Tangerine", "serif"],
   },
 });
 
+// eslint-disable-next-line react/jsx-filename-extension
 ReactDOM.render(<App />, document.getElementById("root"));

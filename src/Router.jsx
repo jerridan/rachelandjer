@@ -1,10 +1,10 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import Timeline from "./Timeline/Timeline";
-import Home from "./Home/Home";
-import Ceremony from "./Ceremony/Ceremony";
-import Gifts from "./Gifts/Gifts";
-import MessageSent from "./MessageSent/MessageSent";
+import Timeline from "./pages/Timeline/Timeline";
+import Home from "./pages/Home/Home";
+import Ceremony from "./pages/Ceremony/Ceremony";
+import Gifts from "./pages/Gifts/Gifts";
+import MessageSent from "./pages/MessageSent/MessageSent";
 
 export default function RouterComponent() {
   return (

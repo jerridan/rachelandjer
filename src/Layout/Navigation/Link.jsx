@@ -1,24 +1,24 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
+import theme from "../../theme";
+
+const NavListItem = styled.li`
+  list-style: none;
+  height: 45px;
+  font-size: ${theme.fontSizes.small};
+
+  a {
+    text-decoration: none;
+    color: inherit;
+    padding-bottom: 5px;
+    &:hover {
+      color: ${theme.colors.olive};
+    }
+  }
+`;
 
 export default function Link({ children, to }) {
-  const NavListItem = styled.li`
-    list-style: none;
-    height: 45px;
-    font-size: 14px;
-    color: #373d3f;
-
-    a {
-      text-decoration: none;
-      color: inherit;
-      padding-bottom: 5px;
-      &:hover {
-        color: #838a62;
-      }
-    }
-  `;
-
   return (
     <NavListItem>
       <NavLink

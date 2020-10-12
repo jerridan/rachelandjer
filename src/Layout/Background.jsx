@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import backgroundImage from "./images/leafy_green_bg_2400x1600.jpg";
+import backgroundImage from "../images/leafy_green_bg_2400x1600.jpg";
 
 const Background = styled.div`
   position: absolute;

@@ -21,8 +21,8 @@ export default function Gallery() {
   return (
     <CarouselContainer>
       <Carousel arrows infinite>
-        {images.map((image, index) => (
-          <CarouselImageContainer key={index}>
+        {images.map((image) => (
+          <CarouselImageContainer key={image.name}>
             <CarouselImage image={image} />
           </CarouselImageContainer>
         ))}
