@@ -9,6 +9,7 @@ import ParallaxGallery from "./ParallaxGallery";
 import { Parallax, ParallaxLayer } from "react-spring/renderprops-addons";
 import { extraSmall, small, medium, large } from "../../breakpoints";
 import images from "./images";
+import theme from "../../theme";
 
 const Background = styled.div`
   position: absolute;
@@ -40,7 +41,7 @@ const Title = styled.div`
 `;
 
 const Blurb = styled.p`
-  font-size: 16px;
+  font-size: ${theme.fontSizes.medium};
   text-align: center;
   color: brown;
   padding-left: 15px;

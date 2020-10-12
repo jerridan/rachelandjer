@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Image as CloudinaryImage, Transformation } from "cloudinary-react";
 import { useMediaQuery } from "react-responsive";
 import { extraSmall, small } from "../../breakpoints";
+import theme from "../../theme";
 
 const ImageContainer = styled.div`
   margin: 0 auto;
@@ -45,7 +46,7 @@ const Description = styled.span`
   vertical-align: middle;
   text-align: center;
   color: brown;
-  font-size: 16px;
+  font-size: ${theme.fontSizes.medium};
 `;
 
 const Banner = styled.div`

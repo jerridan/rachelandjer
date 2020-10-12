@@ -30,7 +30,7 @@ const MenuPanel = styled.nav`
 `;
 
 const MenuTitle = styled.span`
-  font-size: 16px;
+  font-size: ${theme.fontSizes.medium};
   padding-left: 5px;
   line-height: 30px;
 `;

@@ -15,14 +15,14 @@ const Title = styled.p`
   margin-bottom: 25px;
   letter-spacing: 0.3em;
   font-family: Tangerine, serif;
-  font-size: 50px;
+  font-size: ${theme.fontSizes.heading2};
 `;
 
 const Details = styled.p`
   margin-top: 20px;
   margin-bottom: 20px;
   letter-spacing: 0.1em;
-  font-size: 16px;
+  font-size: ${theme.fontSizes.medium};
   max-width: 750px;
   text-align: left;
   line-height: 1.25em;

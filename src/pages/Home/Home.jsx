@@ -1,17 +1,18 @@
 import React from "react";
 import styled from "styled-components";
 import Layout from "../../Layout/Layout";
+import theme from "../../theme";
 
 const Names = styled.p`
   margin: 10px;
   letter-spacing: 0.3em;
   font-family: Tangerine, serif;
-  font-size: 60px;
+  font-size: ${theme.fontSizes.heading1};
 `;
 
 const Details = styled.p`
   letter-spacing: 0.1em;
-  font-size: 16px;
+  font-size: ${theme.fontSizes.medium};
 `;
 
 const Content = styled.div`
