@@ -13,7 +13,7 @@ const NavListItem = styled.li`
     color: inherit;
     padding-bottom: 5px;
     &:hover {
-      color: #838a62;
+      color: ${theme.colors.olive};
     }
   }
 `;

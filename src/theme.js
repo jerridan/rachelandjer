@@ -2,6 +2,7 @@ const theme = {
   colors: {
     darkGrey: "#373d3f",
     white: "#f9f9f9",
+    olive: "#838a62",
   },
   fontSizes: {
     small: "14px",
