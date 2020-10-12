@@ -5,7 +5,7 @@ import App from "./App";
 
 WebFont.load({
   google: {
-    families: ["Lora", "Tangerine", "sans-serif"],
+    families: ["Lora", "Tangerine", "serif"],
   },
 });
 

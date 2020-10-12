@@ -26,14 +26,12 @@ const MenuPanel = styled.nav`
   bottom: 0;
   width: 100%;
   background-color: #e3e3e3;
-  font-family: Lora, serif;
 `;
 
 const MenuTitle = styled.span`
   font-size: 16px;
   padding-left: 5px;
   line-height: 30px;
-  color: #373d3f;
 `;
 
 const IconWrapper = styled.div`

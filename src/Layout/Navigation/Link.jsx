@@ -7,7 +7,6 @@ export default function Link({ children, to }) {
     list-style: none;
     height: 45px;
     font-size: 14px;
-    color: #373d3f;
 
     a {
       text-decoration: none;

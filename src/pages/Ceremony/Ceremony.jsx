@@ -5,8 +5,6 @@ import Layout from "../../Layout/Layout";
 const Content = styled.div`
   background-color: #f9f9f9;
   text-align: center;
-  font-family: Lora, serif;
-  color: #373d3f;
   padding: 50px;
 `;
 

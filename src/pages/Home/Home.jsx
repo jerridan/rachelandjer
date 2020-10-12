@@ -17,9 +17,7 @@ export default function Home() {
 
   const Content = styled.div`
     text-align: center;
-    font-family: Lora, serif;
     height: 200px;
-    color: #373d3f;
   `;
 
   return (

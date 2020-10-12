@@ -7,7 +7,6 @@ export default function DesktopNavigation() {
     position: absolute;
     top: 70px;
     left: 100px;
-    font-family: Lora, serif;
   `;
 
   return (

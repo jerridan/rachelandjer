@@ -14,7 +14,6 @@ const Background = styled.div`
   position: absolute;
   height: 100vh;
   width: 100%;
-  font-family: Lora, serif;
   background-position-y: 35%;
   background-size: cover;
   background-repeat: no-repeat;
