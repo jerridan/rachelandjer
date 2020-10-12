@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import Link from "./Link";
 
 const Navigation = styled.nav`
   position: absolute;
@@ -8,14 +7,6 @@ const Navigation = styled.nav`
   left: 100px;
 `;
 
-export default function DesktopNavigation() {
-  return (
-    <Navigation>
-      <ul>
-        <Link to="/">Home</Link>
-        <Link to="/ceremony">Ceremony</Link>
-        <Link to="/gifts">Gifts</Link>
-      </ul>
-    </Navigation>
-  );
+export default function DesktopNavigation({ children }) {
+  return <Navigation>{children}</Navigation>;
 }

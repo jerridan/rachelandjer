@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { Transition } from "react-transition-group";
 import MenuSvg from "../../icons/MenuSvg";
 import theme from "../../theme";
-import Link from "./Link";
 
 const defaultStyle = {
   transition: "height 500ms ease-in-out",
@@ -11,8 +10,8 @@ const defaultStyle = {
 };
 
 const transitionStyles = {
-  entering: { height: "200px" },
-  entered: { height: "200px" },
+  entering: { height: "250px" },
+  entered: { height: "250px" },
   exiting: { height: "50px" },
   exited: { height: "50px" },
 };
@@ -47,7 +46,7 @@ const IconWrapper = styled.div`
   align-items: center;
 `;
 
-export default function MobileNavigation() {
+export default function MobileNavigation({ children }) {
   const [inProp, setInProp] = useState(false);
 
   const toggleNavigation = () => {
@@ -67,11 +66,7 @@ export default function MobileNavigation() {
             </IconWrapper>
             <MenuTitle>MENU</MenuTitle>
           </MenuButton>
-          <ul>
-            <Link to="/">Home</Link>
-            <Link to="/ceremony">Ceremony</Link>
-            <Link to="/gifts">Gifts</Link>
-          </ul>
+          {children}
         </MenuPanel>
       )}
     </Transition>

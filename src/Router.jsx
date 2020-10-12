@@ -5,6 +5,7 @@ import Home from "./pages/Home/Home";
 import Ceremony from "./pages/Ceremony/Ceremony";
 import Gifts from "./pages/Gifts/Gifts";
 import MessageSent from "./pages/MessageSent/MessageSent";
+import OurStory from "./pages/OurStory/OurStory";
 
 export default function RouterComponent() {
   return (
@@ -15,6 +16,7 @@ export default function RouterComponent() {
         <Route path="/gifts" component={Gifts} />
         <Route path="/timeline" component={Timeline} />
         <Route path="/message-sent" component={MessageSent} />
+        <Route path="/our-story" component={OurStory} />
       </Switch>
     </BrowserRouter>
   );
