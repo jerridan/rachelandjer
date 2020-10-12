@@ -2,28 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import theme from "../../theme";
 import Layout from "../../Layout/Layout";
-
-const Content = styled.div`
-  background-color: ${theme.colors.white};
-  text-align: center;
-  padding: 50px;
-`;
-
-const Title = styled.p`
-  margin-top: 25px;
-  margin-bottom: 25px;
-  letter-spacing: 0.3em;
-  font-family: Tangerine, serif;
-  font-size: ${theme.fontSizes.heading2};
-`;
-
-const Details = styled.p`
-  margin-top: 20px;
-  margin-bottom: 20px;
-  letter-spacing: 0.1em;
-  font-size: ${theme.fontSizes.medium};
-  max-width: 750px;
-`;
+import Content from "../../components/Content";
+import Details from "../../components/Details";
+import Title from "../../components/Title";
 
 const Date = styled.p`
   letter-spacing: 0.1em;
