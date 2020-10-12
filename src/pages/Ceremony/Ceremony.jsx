@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Layout from "../Layout/Layout";
+import Layout from "../../Layout/Layout";
 
 const Content = styled.div`
   background-color: #f9f9f9;
@@ -26,15 +26,24 @@ const Details = styled.p`
   max-width: 750px;
 `;
 
-export default function MessageSent() {
+const Date = styled.p`
+  letter-spacing: 0.1em;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  font-family: Tangerine, serif;
+  font-size: 30px;
+`;
+
+export default function Ceremony() {
   return (
     <Layout>
       <Content>
-        <Title>Success!</Title>
+        <Title>The Wedding Day</Title>
+        <Date>October 24, 2020 at 4:30 est</Date>
+        <Details>Thank you for joining us as we share our vows!</Details>
         <Details>
-          Thanks for the message. We'll get in touch with you soon!
+          A link to the livestream will be provided here prior to our ceremony
         </Details>
-        <Details>From Jerridan & Rachel</Details>
       </Content>
     </Layout>
   );
