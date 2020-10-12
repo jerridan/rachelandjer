@@ -2,9 +2,10 @@ import React from "react";
 import Layout from "../../Layout/Layout";
 import styled from "styled-components";
 import "./kwesFormOverrides.css";
+import theme from "../../theme";
 
 const Content = styled.div`
-  background-color: #f9f9f9;
+  background-color: ${theme.colors.white};
   text-align: center;
   padding: 50px;
 `;

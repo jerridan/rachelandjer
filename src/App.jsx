@@ -9,7 +9,7 @@ const Normalize = createGlobalStyle`${normalize()}`;
 const GlobalStyle = createGlobalStyle`
   body {
     font-family: Lora, serif;
-    color: ${theme.darkGrey};
+    color: ${theme.colors.darkGrey};
   }
 `;
 

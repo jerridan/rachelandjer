@@ -1,9 +1,10 @@
 import React from "react";
 import styled from "styled-components";
+import theme from "../../theme";
 import Layout from "../../Layout/Layout";
 
 const Content = styled.div`
-  background-color: #f9f9f9;
+  background-color: ${theme.colors.white};
   text-align: center;
   padding: 50px;
 `;
