@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Background from "../Background";
-import Navigation from "../Navigation/Navigation";
+import Layout from "../Layout/Layout";
 
 const Content = styled.div`
   background-color: #f9f9f9;
@@ -29,8 +28,7 @@ const Details = styled.p`
 
 export default function MessageSent() {
   return (
-    <Background>
-      <Navigation />
+    <Layout>
       <Content>
         <Title>Success!</Title>
         <Details>
@@ -38,6 +36,6 @@ export default function MessageSent() {
         </Details>
         <Details>From Jerridan & Rachel</Details>
       </Content>
-    </Background>
+    </Layout>
   );
 }

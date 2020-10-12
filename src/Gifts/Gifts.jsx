@@ -1,6 +1,5 @@
 import React from "react";
-import Background from "../Background";
-import Navigation from "../Navigation/Navigation";
+import Layout from "../Layout/Layout";
 import styled from "styled-components";
 import "./kwesFormOverrides.css";
 
@@ -67,8 +66,7 @@ export default function Gifts() {
   document.head.appendChild(kwesScript);
 
   return (
-    <Background>
-      <Navigation />
+    <Layout>
       <Content>
         <Title>Gifts</Title>
         <Details>To all of our guests,</Details>
@@ -110,6 +108,6 @@ export default function Gifts() {
           <button type="submit">Submit</button>
         </Form>
       </Content>
-    </Background>
+    </Layout>
   );
 }

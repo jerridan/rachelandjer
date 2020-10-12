@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Background from "../Background";
-import Navigation from "../Navigation/Navigation";
+import Layout from "../Layout/Layout";
 
 const Content = styled.div`
   background-color: #f9f9f9;
@@ -37,8 +36,7 @@ const Date = styled.p`
 
 export default function Ceremony() {
   return (
-    <Background>
-      <Navigation />
+    <Layout>
       <Content>
         <Title>The Wedding Day</Title>
         <Date>October 24, 2020 at 4:30 est</Date>
@@ -47,6 +45,6 @@ export default function Ceremony() {
           A link to the livestream will be provided here prior to our ceremony
         </Details>
       </Content>
-    </Background>
+    </Layout>
   );
 }

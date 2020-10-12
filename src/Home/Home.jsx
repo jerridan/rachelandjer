@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Background from "../Background";
-import Navigation from "../Navigation/Navigation";
+import Layout from "../Layout/Layout";
 
 export default function Home() {
   const Names = styled.p`
@@ -24,12 +23,11 @@ export default function Home() {
   `;
 
   return (
-    <Background>
-      <Navigation />
+    <Layout>
       <Content>
         <Names>Rachel & Jerridan</Names>
         <Details>Are Getting Married</Details>
       </Content>
-    </Background>
+    </Layout>
   );
 }

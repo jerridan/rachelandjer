@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import { useMediaQuery } from "react-responsive";
-import { small } from "../breakpoints";
+import { small } from "../../breakpoints";
 import DesktopNavigation from "./DesktopNavigation";
 import MobileNavigation from "./MobileNavigation";
 

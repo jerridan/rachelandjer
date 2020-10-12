@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { Transition } from "react-transition-group";
 import Link from "./Link";
-import MenuSvg from "../icons/MenuSvg";
+import MenuSvg from "../../icons/MenuSvg";
 
 const defaultStyle = {
   transition: `height 500ms ease-in-out`,
