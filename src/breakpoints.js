@@ -1,3 +1,4 @@
+export const tiny = 400;
 export const extraSmall = 768;
 export const small = 1024;
 export const medium = 1360;

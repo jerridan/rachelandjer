@@ -3,6 +3,7 @@ const theme = {
     darkGrey: "#373d3f",
     white: "#f9f9f9",
     olive: "#838a62",
+    purple: "#e3cef0",
   },
   fontSizes: {
     small: "14px",

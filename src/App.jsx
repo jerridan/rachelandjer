@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import { CloudinaryContext } from "cloudinary-react";
 import { createGlobalStyle } from "styled-components";
 import { normalize } from "polished";
