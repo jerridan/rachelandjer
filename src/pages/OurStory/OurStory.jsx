@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
+import { useMediaQuery } from "react-responsive";
 import { Image as CloudinaryImage, Transformation } from "cloudinary-react";
+import { extraSmall, large, small, tiny } from "../../breakpoints";
 import Title from "../../components/Title";
 import Navigation from "../../Layout/Navigation/Navigation";
 import SharedDetails from "../../components/Details";
@@ -19,10 +21,12 @@ const Content = styled.div`
   text-align: center;
   z-index: 10;
   margin-top: 61px;
+  max-width: ${({ contentWidth }) =>
+    contentWidth ? `${contentWidth}px` : "75%"};
 `;
 
-const BgColor1 = styled.div`
-  background-color: #e3cef0;
+const BgColor = styled.div`
+  background-color: ${theme.colors.purple};
   position: absolute;
   top: 0;
   height: ${(props) => props.height}px;
@@ -30,12 +34,44 @@ const BgColor1 = styled.div`
 `;
 
 const Details = styled(SharedDetails)`
-  max-width: 980px;
   text-align: justify;
+  width: 100%;
 `;
 
 export default function OurStory() {
   const [picOffset, setPicOffset] = useState(0);
+  const isLargeScreen = useMediaQuery({ minWidth: large });
+  const isSmallScreen = useMediaQuery({ minWidth: small });
+  const isExtraSmallScreen = useMediaQuery({ minWidth: extraSmall });
+  const isTinyScreen = useMediaQuery({ minWidth: tiny });
+
+  const getContentWidth = () => {
+    if (isLargeScreen) return 980;
+
+    if (isSmallScreen) return 768;
+
+    if (isExtraSmallScreen) return 550;
+
+    return null;
+  };
+
+  const getPictureWidth = () => {
+    if (isLargeScreen) return 980;
+
+    if (isSmallScreen) return 768;
+
+    if (isExtraSmallScreen) return 550;
+
+    if (isTinyScreen) return 300;
+
+    return 250;
+  };
+
+  const getPictureHeight = () => {
+    if (isSmallScreen) return 550;
+
+    return 350;
+  };
 
   useEffect(() => {
     setPicOffset(document.getElementById("picture").offsetTop);
@@ -43,9 +79,9 @@ export default function OurStory() {
 
   return (
     <Page>
-      <BgColor1 height={picOffset + 275} />
+      <BgColor height={picOffset + getPictureHeight() / 2} id="bgcolor" />
       <Navigation />
-      <Content>
+      <Content contentWidth={getContentWidth()}>
         <Title>Our Story</Title>
         <Details>
           They met in the fall of 2018. Rachel likes to tell the story that
@@ -60,8 +96,8 @@ export default function OurStory() {
         </Details>
         <CloudinaryImage publicId="engagement-shoot-18" id="picture">
           <Transformation
-            height="550"
-            width="980"
+            height={getPictureHeight()}
+            width={getPictureWidth()}
             crop="fill"
             gravity="faces"
             quality="100"
