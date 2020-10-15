@@ -26,6 +26,7 @@ const MenuPanel = styled.nav`
   bottom: 0;
   width: 100%;
   background-color: #e3e3e3;
+  z-index: 120;
 `;
 
 const MenuTitle = styled.span`
