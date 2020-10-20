@@ -22,7 +22,15 @@ export default function Ceremony() {
         <Date>October 24, 2020 at 4:30 est</Date>
         <Details>Thank you for joining us as we share our vows!</Details>
         <Details>
-          A link to the livestream will be provided here prior to our ceremony
+          <iframe
+            title="ceremony-livestream"
+            width="560"
+            height="315"
+            src="https://www.youtube-nocookie.com/embed/ruIyVCSjsnY"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
         </Details>
       </Content>
     </Layout>
