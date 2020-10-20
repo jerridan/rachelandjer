@@ -14,6 +14,11 @@ const Date = styled.p`
   font-size: ${theme.fontSizes.larger};
 `;
 
+const ExternalLink = styled.a`
+  color: #00438f;
+  text-decoration: none;
+`;
+
 export default function Ceremony() {
   return (
     <Layout>
@@ -22,7 +27,27 @@ export default function Ceremony() {
         <Date>October 24, 2020 at 4:30 est</Date>
         <Details>Thank you for joining us as we share our vows!</Details>
         <Details>
-          A link to the livestream will be provided here prior to our ceremony
+          <iframe
+            title="ceremony-livestream"
+            width="560"
+            height="315"
+            src="https://www.youtube-nocookie.com/embed/ruIyVCSjsnY"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
+        </Details>
+        <Details>
+          Share in the moment with us! Take a selfie of yourselves watching the
+          ceremony and share it on social media using the hashtag{" "}
+          <ExternalLink
+            href="https://www.instagram.com/explore/tags/rachelandjer/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            #rachelandjer
+          </ExternalLink>
+          .
         </Details>
       </Content>
     </Layout>
