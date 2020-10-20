@@ -1,10 +1,11 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import Layout from "../../Layout/Layout";
 import "./kwesFormOverrides.css";
 import Content from "../../components/Content";
 import SharedDetails from "../../components/Details";
 import Title from "../../components/Title";
+import theme from "../../theme";
 
 const Details = styled(SharedDetails)`
   text-align: left;
@@ -14,28 +15,37 @@ const Form = styled.form`
   text-align: left;
 `;
 
-const Field = styled.div`
-  display: block;
-  padding-bottom: 10px;
+const ExternalLink = styled.a`
+  color: #00438f;
+  text-decoration: underline;
 `;
 
-const Label = styled.label`
-  width: 150px;
-  display: inline-block;
-  vertical-align: top;
-  padding-top: 5px;
+const inputStyles = css`
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid ${theme.colors.grey};
+  margin-bottom: 10px;
 `;
 
 const TextArea = styled.textarea`
-  width: 100%;
-  padding: 5px;
-  border: 1px solid #373d3f;
+  ${inputStyles}
 `;
 
 const Input = styled.input`
-  width: 100%;
-  padding: 5px;
-  border: 1px solid #373d3f;
+  ${inputStyles}
+`;
+
+const Button = styled.button`
+  height: 40px;
+  color: ${theme.colors.white};
+  background-color: ${theme.colors.darkGrey};
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  &:hover {
+    background-color: ${theme.colors.grey};
+  }
 `;
 
 export default function Gifts() {
@@ -57,13 +67,13 @@ export default function Gifts() {
         </Details>
         <Details>
           If you would like to give a gift, you can find our registry{" "}
-          <a
+          <ExternalLink
             target="_blank"
             rel="noopener noreferrer"
             href="https://www.myregistry.com/wedding-website/rachel-hon-and-jerridan-quiring-toronto-on/2537277/welcomemessage"
           >
             here
-          </a>
+          </ExternalLink>
           . You can also send us an e-transfer if you like.
         </Details>
         <Details>
@@ -75,19 +85,26 @@ export default function Gifts() {
           action="https://kwes.io/api/foreign/forms/u0pubsxkBcKWNmbI3Qch"
           data-kw-redirect="/message-sent"
         >
-          <Field>
-            <Label htmlFor="name">Full Name</Label>
-            <Input name="name" type="text" rules="required" />
-          </Field>
-          <Field>
-            <Label htmlFor="email">Email</Label>
-            <Input name="email" type="email" rules="required|email" />
-          </Field>
-          <Field>
-            <Label htmlFor="message">Message</Label>
-            <TextArea name="message" type="text" rows="3" rules="required" />
-          </Field>
-          <button type="submit">Submit</button>
+          <Input
+            name="name"
+            type="text"
+            placeholder="Full Name"
+            rules="required"
+          />
+          <Input
+            name="email"
+            type="email"
+            placeholder="Email"
+            rules="required|email"
+          />
+          <TextArea
+            name="message"
+            type="text"
+            rows="3"
+            placeholder="Message"
+            rules="required"
+          />
+          <Button type="submit">Submit</Button>
         </Form>
       </Content>
     </Layout>
