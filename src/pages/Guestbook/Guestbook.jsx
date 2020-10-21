@@ -1,5 +1,5 @@
 import React from "react";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import Layout from "../../Layout/Layout";
 import Content from "../../components/Content";
 import Title from "../../components/Title";
@@ -7,24 +7,16 @@ import theme from "../../theme";
 import Details from "../../components/Details";
 import "../../kwesFormOverrides.css";
 
-const inputStyles = css`
-  width: 100%;
-  padding: 10px;
-  box-sizing: border-box;
-  border: 1px solid ${theme.colors.grey};
-  margin-bottom: 10px;
-`;
+const inputStyles = {
+  width: "100%",
+  padding: "10px",
+  boxSizing: "border-box",
+  border: `1px solid ${theme.colors.grey}`,
+  marginBottom: "10px",
+};
 
 const Form = styled.form`
   text-align: left;
-`;
-
-const TextArea = styled.textarea`
-  ${inputStyles}
-`;
-
-const Input = styled.input`
-  ${inputStyles}
 `;
 
 const Button = styled.button`
@@ -58,12 +50,17 @@ export default function Guestbook() {
           action="https://kwes.io/api/foreign/forms/K7lk1OV6wDyGnOFrfrEp"
           data-kw-redirect="/message-sent"
         >
-          <Input name="name" rules="required" type="text" />
-          <TextArea
+          <input
+            style={inputStyles}
+            placeholder="Name"
+            name="name"
+            rules="required"
+            type="text"
+          />
+          <textarea
+            style={inputStyles}
             placeholder="Message (optional)"
             name="message"
-            rules="max:255"
-            type="text"
           />
           <Button type="submit">Submit</Button>
         </Form>

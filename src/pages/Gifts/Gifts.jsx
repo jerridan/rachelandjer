@@ -1,5 +1,5 @@
 import React from "react";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import Layout from "../../Layout/Layout";
 import Content from "../../components/Content";
 import SharedDetails from "../../components/Details";
@@ -20,21 +20,13 @@ const ExternalLink = styled.a`
   text-decoration: underline;
 `;
 
-const inputStyles = css`
-  width: 100%;
-  padding: 10px;
-  box-sizing: border-box;
-  border: 1px solid ${theme.colors.grey};
-  margin-bottom: 10px;
-`;
-
-const TextArea = styled.textarea`
-  ${inputStyles}
-`;
-
-const Input = styled.input`
-  ${inputStyles}
-`;
+const inputStyles = {
+  width: "100%",
+  padding: "10px",
+  boxSizing: "border-box",
+  border: `1px solid ${theme.colors.grey}`,
+  marginBottom: "10px",
+};
 
 const Button = styled.button`
   height: 40px;
@@ -85,24 +77,26 @@ export default function Gifts() {
           action="https://kwes.io/api/foreign/forms/u0pubsxkBcKWNmbI3Qch"
           data-kw-redirect="/message-sent"
         >
-          <Input
+          <input
+            style={inputStyles}
             name="name"
             type="text"
             placeholder="Full Name"
             rules="required"
           />
-          <Input
+          <input
+            style={inputStyles}
             name="email"
             type="email"
             placeholder="Email"
             rules="required|email"
           />
-          <TextArea
+          <textarea
+            style={inputStyles}
             name="message"
-            type="text"
             rows="3"
             placeholder="Message"
-            rules="required|max:255"
+            rules="required"
           />
           <Button type="submit">Submit</Button>
         </Form>
