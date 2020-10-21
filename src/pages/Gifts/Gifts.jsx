@@ -1,11 +1,11 @@
 import React from "react";
 import styled, { css } from "styled-components";
 import Layout from "../../Layout/Layout";
-import "./kwesFormOverrides.css";
 import Content from "../../components/Content";
 import SharedDetails from "../../components/Details";
 import Title from "../../components/Title";
 import theme from "../../theme";
+import "../../kwesFormOverrides.css";
 
 const Details = styled(SharedDetails)`
   text-align: left;
