@@ -1,35 +1,10 @@
 import React from "react";
-import styled from "styled-components";
 import Layout from "../../Layout/Layout";
 import Content from "../../components/Content";
 import Title from "../../components/Title";
-import theme from "../../theme";
 import Details from "../../components/Details";
+import { Button, Form, inputStyles } from "../../components/Form";
 import "../../kwesFormOverrides.css";
-
-const inputStyles = {
-  width: "100%",
-  padding: "10px",
-  boxSizing: "border-box",
-  border: `1px solid ${theme.colors.grey}`,
-  marginBottom: "10px",
-};
-
-const Form = styled.form`
-  text-align: left;
-`;
-
-const Button = styled.button`
-  height: 40px;
-  color: ${theme.colors.white};
-  background-color: ${theme.colors.darkGrey};
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  &:hover {
-    background-color: ${theme.colors.grey};
-  }
-`;
 
 export default function Guestbook() {
   const kwesScript = document.createElement("script");

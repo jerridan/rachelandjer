@@ -4,40 +4,16 @@ import Layout from "../../Layout/Layout";
 import Content from "../../components/Content";
 import SharedDetails from "../../components/Details";
 import Title from "../../components/Title";
-import theme from "../../theme";
+import { Button, Form, inputStyles } from "../../components/Form";
 import "../../kwesFormOverrides.css";
 
 const Details = styled(SharedDetails)`
   text-align: left;
 `;
 
-const Form = styled.form`
-  text-align: left;
-`;
-
 const ExternalLink = styled.a`
   color: #00438f;
   text-decoration: underline;
-`;
-
-const inputStyles = {
-  width: "100%",
-  padding: "10px",
-  boxSizing: "border-box",
-  border: `1px solid ${theme.colors.grey}`,
-  marginBottom: "10px",
-};
-
-const Button = styled.button`
-  height: 40px;
-  color: ${theme.colors.white};
-  background-color: ${theme.colors.darkGrey};
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  &:hover {
-    background-color: ${theme.colors.grey};
-  }
 `;
 
 export default function Gifts() {
