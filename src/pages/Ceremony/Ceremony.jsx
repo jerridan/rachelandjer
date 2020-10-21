@@ -27,7 +27,7 @@ export default function Ceremony() {
   return (
     <Layout>
       <Content>
-        <Title>The Wedding Day</Title>
+        <Title>Wedding Ceremony</Title>
         <Date>October 24, 2020 at 4:30 est</Date>
         <Details>Thank you for joining us as we share our vows!</Details>
         <Details>
