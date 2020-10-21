@@ -102,7 +102,7 @@ export default function Gifts() {
             type="text"
             rows="3"
             placeholder="Message"
-            rules="required"
+            rules="required|max:255"
           />
           <Button type="submit">Submit</Button>
         </Form>

@@ -40,15 +40,31 @@ const Button = styled.button`
 `;
 
 export default function Guestbook() {
+  const kwesScript = document.createElement("script");
+
+  kwesScript.setAttribute("src", "https://kwes.io/v2/kwes-script.js");
+  kwesScript.setAttribute("charset", "utf-8");
+
+  document.head.appendChild(kwesScript);
+
   return (
     <Layout>
       <Content>
         <Title>Guestbook</Title>
         <Details>Thank you for sharing in our special day! </Details>
         <Details>Let us know you were here, and send us a note.</Details>
-        <Form>
-          <Input placeholder="Name" />
-          <TextArea placeholder="Message (optional)" />
+        <Form
+          className="kwes-form"
+          action="https://kwes.io/api/foreign/forms/K7lk1OV6wDyGnOFrfrEp"
+          data-kw-redirect="/message-sent"
+        >
+          <Input name="name" rules="required" type="text" />
+          <TextArea
+            placeholder="Message (optional)"
+            name="message"
+            rules="max:255"
+            type="text"
+          />
           <Button type="submit">Submit</Button>
         </Form>
       </Content>
