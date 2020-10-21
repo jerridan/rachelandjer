@@ -1,51 +1,19 @@
 import React from "react";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import Layout from "../../Layout/Layout";
-import "./kwesFormOverrides.css";
 import Content from "../../components/Content";
 import SharedDetails from "../../components/Details";
 import Title from "../../components/Title";
-import theme from "../../theme";
+import { Button, Form, inputStyles } from "../../components/Form";
+import "../../kwesFormOverrides.css";
 
 const Details = styled(SharedDetails)`
-  text-align: left;
-`;
-
-const Form = styled.form`
   text-align: left;
 `;
 
 const ExternalLink = styled.a`
   color: #00438f;
   text-decoration: underline;
-`;
-
-const inputStyles = css`
-  width: 100%;
-  padding: 10px;
-  box-sizing: border-box;
-  border: 1px solid ${theme.colors.grey};
-  margin-bottom: 10px;
-`;
-
-const TextArea = styled.textarea`
-  ${inputStyles}
-`;
-
-const Input = styled.input`
-  ${inputStyles}
-`;
-
-const Button = styled.button`
-  height: 40px;
-  color: ${theme.colors.white};
-  background-color: ${theme.colors.darkGrey};
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  &:hover {
-    background-color: ${theme.colors.grey};
-  }
 `;
 
 export default function Gifts() {
@@ -85,21 +53,23 @@ export default function Gifts() {
           action="https://kwes.io/api/foreign/forms/u0pubsxkBcKWNmbI3Qch"
           data-kw-redirect="/message-sent"
         >
-          <Input
+          <input
+            style={inputStyles}
             name="name"
             type="text"
-            placeholder="Full Name"
+            placeholder="Name"
             rules="required"
           />
-          <Input
+          <input
+            style={inputStyles}
             name="email"
             type="email"
             placeholder="Email"
             rules="required|email"
           />
-          <TextArea
+          <textarea
+            style={inputStyles}
             name="message"
-            type="text"
             rows="3"
             placeholder="Message"
             rules="required"

@@ -9,6 +9,7 @@ const Links = () => (
   <ul>
     <Link to="/">Home</Link>
     <Link to="/ceremony">Ceremony</Link>
+    <Link to="/guestbook">Guestbook</Link>
     <Link to="/our-story">Our Story</Link>
     <Link to="/gifts">Gifts</Link>
   </ul>
