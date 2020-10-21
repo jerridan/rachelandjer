@@ -53,6 +53,10 @@ export default function Ceremony() {
           </ExternalLink>
           .
         </Details>
+        <Details>
+          And don&apos;t forget to sign your name in our{" "}
+          <ExternalLink href="/guestbook">guestbook</ExternalLink>!
+        </Details>
       </Content>
     </Layout>
   );
