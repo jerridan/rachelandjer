@@ -57,7 +57,7 @@ export default function Gifts() {
             style={inputStyles}
             name="name"
             type="text"
-            placeholder="Full Name"
+            placeholder="Name"
             rules="required"
           />
           <input

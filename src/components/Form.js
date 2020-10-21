@@ -23,4 +23,5 @@ export const inputStyles = {
   boxSizing: "border-box",
   border: `1px solid ${theme.colors.grey}`,
   marginBottom: "10px",
+  lineHeight: "1.2em",
 };
