@@ -7,6 +7,7 @@ import Gifts from "./pages/Gifts/Gifts";
 import MessageSent from "./pages/MessageSent/MessageSent";
 import OurStory from "./pages/OurStory/OurStory";
 import Guestbook from "./pages/Guestbook/Guestbook";
+import GuestbookSigned from "./pages/GuestbookSigned/GuestbookSigned";
 
 export default function RouterComponent() {
   return (
@@ -17,6 +18,7 @@ export default function RouterComponent() {
         <Route path="/gifts" component={Gifts} />
         <Route path="/timeline" component={Timeline} />
         <Route path="/message-sent" component={MessageSent} />
+        <Route path="/guestbook-signed" component={GuestbookSigned} />
         <Route path="/our-story" component={OurStory} />
         <Route path="/guestbook" component={Guestbook} />
       </Switch>

@@ -23,7 +23,7 @@ export default function Guestbook() {
         <Form
           className="kwes-form"
           action="https://kwes.io/api/foreign/forms/K7lk1OV6wDyGnOFrfrEp"
-          data-kw-redirect="/message-sent"
+          data-kw-redirect="/guestbook-signed"
         >
           <input
             style={inputStyles}
