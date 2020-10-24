@@ -35,7 +35,7 @@ export default function Ceremony() {
             title="ceremony-livestream"
             width={isTinyScreen ? 300 : 560}
             height="315"
-            src="https://www.youtube-nocookie.com/embed/ruIyVCSjsnY"
+            src="https://www.youtube-nocookie.com/embed/-EuyV_V0mis"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
