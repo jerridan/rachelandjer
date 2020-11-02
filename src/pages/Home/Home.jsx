@@ -25,7 +25,9 @@ export default function Home() {
     <Layout>
       <Content>
         <Names>Rachel & Jerridan</Names>
-        <Details>Are Getting Married</Details>
+        <Details>
+          Are <strike>Getting</strike> Married
+        </Details>
       </Content>
     </Layout>
   );
