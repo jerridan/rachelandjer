@@ -16,11 +16,6 @@ const Date = styled.p`
   font-size: ${theme.fontSizes.larger};
 `;
 
-const ExternalLink = styled.a`
-  color: #00438f;
-  text-decoration: none;
-`;
-
 export default function Ceremony() {
   const isTinyScreen = useMediaQuery({ maxWidth: extraSmall });
 
@@ -40,22 +35,6 @@ export default function Ceremony() {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           />
-        </Details>
-        <Details>
-          Share in the moment with us! Take a selfie of yourselves watching the
-          ceremony and share it on social media using the hashtag{" "}
-          <ExternalLink
-            href="https://www.instagram.com/explore/tags/rachelandjer/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            #rachelandjer
-          </ExternalLink>
-          .
-        </Details>
-        <Details>
-          And don&apos;t forget to sign your name in our{" "}
-          <ExternalLink href="/guestbook">guestbook</ExternalLink>!
         </Details>
       </Content>
     </Layout>
